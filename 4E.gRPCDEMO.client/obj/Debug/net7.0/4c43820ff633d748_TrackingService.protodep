@@ -1,0 +1,5 @@
+obj\Debug\net7.0/TrackingService.cs \
+obj\Debug\net7.0/TrackingServiceGrpc.cs: C:/Users/Mega Store/.nuget/packages/grpc.tools/2.49.0/build/native/include/google/protobuf/timestamp.proto\
+ ../4E.gRPCDemo.Server/Protos/models.proto\
+ C:/Users/Mega Store/.nuget/packages/grpc.tools/2.49.0/build/native/include/google/protobuf/empty.proto\
+ ../4E.gRPCDemo.Server/Protos/TrackingService.proto
