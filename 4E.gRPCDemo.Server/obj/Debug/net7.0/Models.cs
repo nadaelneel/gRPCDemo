@@ -25,7 +25,7 @@ namespace _4E.gRPCDemo.Server.Protos {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cgxtb2RlbHMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8idQoPVHJhY2tpbmdNZXNzYWdlEhAKCGRldmljZUlkGAEgASgMEg0KBXNw",
+            "dG8idQoPVHJhY2tpbmdNZXNzYWdlEhAKCGRldmljZUlkGAEgASgJEg0KBXNw",
             "ZWVkGAIgASgFEiwKCGRhdGVUaW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcBITCgRsaXN0GAQgAygLMgUubGlzdCIkChBUcmFja2luZ1Jl",
             "c3BvbnNlEhAKCFN1Y2NzZXNzGAEgASgIIiIKBGxpc3QSCwoDa2V5GAEgASgJ",
@@ -105,10 +105,10 @@ namespace _4E.gRPCDemo.Server.Protos {
 
     /// <summary>Field number for the "deviceId" field.</summary>
     public const int DeviceIdFieldNumber = 1;
-    private pb::ByteString deviceId_ = pb::ByteString.Empty;
+    private string deviceId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString DeviceId {
+    public string DeviceId {
       get { return deviceId_; }
       set {
         deviceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -200,7 +200,7 @@ namespace _4E.gRPCDemo.Server.Protos {
     #else
       if (DeviceId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteBytes(DeviceId);
+        output.WriteString(DeviceId);
       }
       if (Speed != 0) {
         output.WriteRawTag(16);
@@ -223,7 +223,7 @@ namespace _4E.gRPCDemo.Server.Protos {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DeviceId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteBytes(DeviceId);
+        output.WriteString(DeviceId);
       }
       if (Speed != 0) {
         output.WriteRawTag(16);
@@ -245,7 +245,7 @@ namespace _4E.gRPCDemo.Server.Protos {
     public int CalculateSize() {
       int size = 0;
       if (DeviceId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(DeviceId);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceId);
       }
       if (Speed != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Speed);
@@ -295,7 +295,7 @@ namespace _4E.gRPCDemo.Server.Protos {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            DeviceId = input.ReadBytes();
+            DeviceId = input.ReadString();
             break;
           }
           case 16: {
@@ -329,7 +329,7 @@ namespace _4E.gRPCDemo.Server.Protos {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            DeviceId = input.ReadBytes();
+            DeviceId = input.ReadString();
             break;
           }
           case 16: {

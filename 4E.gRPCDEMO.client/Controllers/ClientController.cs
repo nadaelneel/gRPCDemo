@@ -15,7 +15,7 @@ namespace _4E.gRPCDEMO.client.Controllers
             _Client = Client;
         }
         [HttpPost]
-        public async Task<IActionResult> YourActionMethod( TrackingMessage request)
+        public async Task<IActionResult> Request( TrackingMessage request)
         {
             var response = await _Client.SendRequest(request);
             return Ok(response);

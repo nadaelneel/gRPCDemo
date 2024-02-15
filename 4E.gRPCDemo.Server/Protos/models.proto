@@ -7,7 +7,7 @@ import "google/protobuf/timestamp.proto";
 
 message TrackingMessage 
 {
-	bytes deviceId =1 ;
+	string deviceId =1 ;
 	int32 speed =2 ;
 	google.protobuf.Timestamp dateTime =3;
 	repeated list list =4 ;
