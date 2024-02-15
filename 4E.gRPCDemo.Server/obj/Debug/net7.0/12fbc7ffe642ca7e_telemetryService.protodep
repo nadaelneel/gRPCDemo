@@ -1,0 +1,4 @@
+obj\Debug\net7.0/TelemetryService.cs \
+obj\Debug\net7.0/TelemetryServiceGrpc.cs: C:/Users/Mega Store/.nuget/packages/grpc.tools/2.60.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/models.proto\
+ Protos/telemetryService.proto

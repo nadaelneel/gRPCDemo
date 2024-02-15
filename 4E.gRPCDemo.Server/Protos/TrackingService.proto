@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "_4E.gRPCDemo.Server.Protos";
+
+
+import "models.proto";
+import "google/protobuf/empty.proto";
+service TrackingService  {
+
+	rpc SendMessage (TrackingMessage) returns (TrackingResponse);
+	//rpc keepAlive (stream PlusMessage) returns (google.protobuf.empty) ;
+}
